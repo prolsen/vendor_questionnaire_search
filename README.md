@@ -87,10 +87,9 @@ git clone <repository-url>
 cd <repository-name>
 ```
 
-2. Create necessary directories:
+2. Create the necessary directory:
 ```bash
 mkdir -p data/storage/qdrant
-mkdir -p data/questions_and_answers
 ```
 
 3. Start the services using Docker Compose:
