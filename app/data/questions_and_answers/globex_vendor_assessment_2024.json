@@ -1,0 +1,117 @@
+{
+    "document_name": "globex_vendor_assessment_2024",
+    "data": [
+        {
+            "row_id": "R001",
+            "reference": "PROD2-SEC-API-01",
+            "question": "What controls are implemented for api security",
+            "answer": "All APIs require authentication using JWT tokens with short expiration times. Rate limiting is implemented to prevent abuse. API endpoints are documented using OpenAPI 3.0 specifications and undergo regular security testing. We maintain API versioning and deprecation policies.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R002",
+            "reference": "PROD1-SEC-CLOUD-01",
+            "question": "Describe your cloud security architecture",
+            "answer": "Our cloud infrastructure uses AWS with defense-in-depth principles. We implement network segmentation, WAF, and DDoS protection. All resources are deployed using Infrastructure as Code with security configurations version controlled. Regular cloud security posture assessments are performed.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R003",
+            "reference": "PROD2-SEC-DATA-01",
+            "question": "What is your data retention and disposal policy",
+            "answer": "Customer data is retained according to contractual requirements, typically 7 years. Data disposal follows NIST SP 800-88 guidelines for secure media sanitization. Cryptographic erasure is used for cloud-stored data, and certificates of destruction are provided upon request.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R004",
+            "reference": "PROD1-SEC-TEST-01",
+            "question": "Describe your security testing methodologies",
+            "answer": "We conduct automated security testing daily and manual penetration testing quarterly. Testing includes SAST, DAST, and IAST tools integrated into our CI/CD pipeline. Third-party penetration testing is performed annually. All critical and high findings are remediated within defined SLAs.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R005",
+            "reference": "PROD2-SEC-BCP-01",
+            "question": "What business continuity plans are in place",
+            "answer": "We maintain comprehensive BCPs covering various scenarios including natural disasters, cyber attacks, and pandemic responses. Plans are reviewed bi-annually and tested annually. Critical business functions have documented recovery procedures with defined RTOs and RPOs.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R006",
+            "reference": "PROD1-SEC-CHG-01",
+            "question": "Describe your change management procedures",
+            "answer": "All changes follow a documented change management process requiring technical review and security assessment. Emergency changes have a separate fast-track process while maintaining security controls. Change advisory board reviews all significant changes, and all changes are tracked in our CMDB.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R007",
+            "reference": "PROD2-SEC-MOB-01",
+            "question": "What mobile security controls are implemented",
+            "answer": "Mobile access requires device enrollment in our MDM solution. We enforce device encryption, passcode policies, and remote wipe capabilities. Mobile apps undergo security testing and are distributed through enterprise app stores only. Regular mobile security assessments are conducted.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R008",
+            "reference": "PROD1-SEC-SUP-01",
+            "question": "Describe your supply chain security measures",
+            "answer": "We maintain a vetted supplier list with regular security assessments. Third-party code and components are scanned for vulnerabilities before integration. We require security certifications from critical suppliers and maintain alternative suppliers for critical components.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R009",
+            "reference": "PROD2-SEC-PRV-01",
+            "question": "What is your privacy compliance framework",
+            "answer": "Our privacy framework aligns with GDPR, CCPA, and PIPEDA requirements. We maintain data mapping and processing records. Privacy impact assessments are conducted for new features. We provide mechanisms for data subject rights requests and maintain records of consent.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R010",
+            "reference": "PROD1-SEC-CNT-01",
+            "question": "Describe your container security controls",
+            "answer": "Containers are scanned for vulnerabilities before deployment using multiple tools. We implement runtime security monitoring, enforce immutable containers, and use minimal base images. Container orchestration includes network policies and pod security policies.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R011",
+            "reference": "PROD1-SEC-CLOUD-02",
+            "question": "What cloud identity and access management controls are implemented",
+            "answer": "We implement role-based access control (RBAC) with least privilege principles. Multi-factor authentication is mandatory for all cloud resource access. Regular access reviews are conducted quarterly. Service accounts use rotating credentials and are monitored for suspicious activity. All access changes are logged and audited.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R012",
+            "reference": "PROD2-SEC-CLOUD-02",
+            "question": "Describe your cloud encryption standards and key management",
+            "answer": "All data at rest is encrypted using AES-256. We use cloud provider managed KMS for key management with automatic key rotation. Customer data in transit is protected using TLS 1.3. Encryption keys are backed up in geographically separate locations and access to key management systems requires multiple approvers.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R013",
+            "reference": "PROD1-SEC-CLOUD-03",
+            "question": "What cloud monitoring and logging practices are in place",
+            "answer": "Comprehensive cloud monitoring includes resource utilization, security events, and compliance metrics. Logs are centrally collected with retention policies aligned to compliance requirements. Real-time alerts are configured for security incidents and anomalies. We use SIEM integration for correlation and analysis of cloud security events.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R014",
+            "reference": "PROD2-SEC-CLOUD-03",
+            "question": "Describe your cloud backup and disaster recovery procedures",
+            "answer": "Cloud resources are backed up across multiple availability zones with point-in-time recovery capabilities. Critical data is replicated to secondary regions with automated failover procedures. Backup integrity is verified monthly, and recovery procedures are tested quarterly. RTO is 4 hours and RPO is 15 minutes for critical systems.",
+            "product": "Product2"
+        },
+        {
+            "row_id": "R015",
+            "reference": "PROD1-SEC-CLOUD-04",
+            "question": "What cloud network security controls are implemented",
+            "answer": "Cloud networks are segmented using VPCs with strict security groups and NACLs. We implement virtual firewalls, IDS/IPS, and regular network scanning. VPN with split tunneling is required for remote access. All internet-facing resources are protected by WAF and DDoS protection services.",
+            "product": "Product1"
+        },
+        {
+            "row_id": "R016",
+            "reference": "PROD2-SEC-CLOUD-04",
+            "question": "Describe your cloud configuration management and compliance monitoring",
+            "answer": "Cloud configurations are managed through Infrastructure as Code using Terraform with version control. We use cloud security posture management (CSPM) tools for continuous compliance monitoring. Regular compliance scans check against CIS benchmarks and industry standards. Automated remediation is implemented for common misconfigurations.",
+            "product": "Product2"
+        }
+    ]
+}

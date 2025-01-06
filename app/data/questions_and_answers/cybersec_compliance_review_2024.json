@@ -1,0 +1,80 @@
+{
+    "document_name": "cybersec_compliance_review_2024",
+    "data": [
+        {
+            "question": "What cryptographic standards are supported",
+            "answer": "We support TLS 1.3, AES-256-GCM, RSA-4096, and ECDSA with P-384 curves. Legacy protocols like TLS 1.1 and older are disabled. We follow NIST guidelines for cryptographic implementations and maintain a cryptographic agility program for algorithm updates.",
+            "product": "Product1"
+        },
+        {
+            "question": "Describe your security awareness training program",
+            "answer": "All employees undergo mandatory security awareness training at hiring and annually thereafter. Training covers phishing, social engineering, data handling, and incident reporting. Monthly security newsletters and quarterly phishing simulations are conducted. Completion is tracked and enforced.",
+            "product": "Product2"
+        },
+        {
+            "question": "What controls are in place for remote access",
+            "answer": "Remote access requires VPN with MFA and is limited to corporate-managed devices. All remote sessions are monitored and logged. Split tunneling is disabled, and idle sessions are automatically disconnected after 30 minutes. Regular access reviews are performed.",
+            "product": "Product1"
+        },
+        {
+            "question": "Describe your access control and authentication mechanisms for the product",
+            "answer": "Our product implements role-based access control (RBAC) with multi-factor authentication (MFA). We support SSO via SAML 2.0 and OAuth 2.0/OIDC. All user sessions are encrypted with TLS 1.3 and require re-authentication after 12 hours of inactivity. Administrative actions require step-up authentication.",
+            "product": "Product1"
+        },
+        {
+            "question": "What encryption methods are used for data at rest and in transit",
+            "answer": "Data in transit is protected using TLS 1.3 with modern cipher suites. Data at rest is encrypted using AES-256 in GCM mode. All encryption keys are managed through AWS KMS with regular key rotation. Customer data is encrypted with unique customer-specific keys.",
+            "product": "Product1"
+        },
+        {
+            "question": "Describe your security incident response process",
+            "answer": "Our incident response process follows NIST guidelines with 24/7 SOC monitoring. We maintain an SLA of 1 hour for critical incidents. The process includes detection, analysis, containment, eradication, and recovery phases. All incidents are documented and reviewed in post-mortems. Customers are notified within 24 hours of any security incidents affecting their data.",
+            "product": "Product2"
+        },
+        {
+            "question": "What security certifications does your product currently maintain",
+            "answer": "Our product maintains SOC 2 Type II, ISO 27001:2013, and HIPAA compliance certifications. We undergo annual third-party penetration testing and quarterly vulnerability assessments. All certifications are renewed annually with reports available upon request under NDA.",
+            "product": "Product1"
+        },
+        {
+            "question": "How is customer data segregated from other customers",
+            "answer": "We implement strict logical separation using tenant-specific database schemas and encryption keys. Each customer's data is stored in isolated containers with dedicated storage volumes. Network traffic is segregated using VPC configurations and security groups. Regular access reviews ensure separation is maintained.",
+            "product": "Product2"
+        },
+        {
+            "question": "Describe your vulnerability management and patch deployment process",
+            "answer": "We conduct weekly automated vulnerability scans and monthly manual security reviews. Critical vulnerabilities are patched within 24 hours, high severity within 7 days, and medium severity within 30 days. Patch deployment follows a staged rollout process with testing in development and staging environments before production deployment.",
+            "product": "Product1"
+        },
+        {
+            "question": "What is your backup and disaster recovery strategy",
+            "answer": "We maintain hourly incremental backups and daily full backups, stored in geographically diverse locations. Our RPO is 1 hour and RTO is 4 hours for critical systems. Disaster recovery procedures are tested quarterly through tabletop exercises and annually through full failover testing.",
+            "product": "Product2"
+        },
+        {
+            "question": "Describe your employee access management and offboarding procedures",
+            "answer": "Employee access follows least privilege principles and requires management approval. Access reviews are conducted quarterly. Offboarding procedures include immediate account deactivation, access revocation, and hardware retrieval. Multi-factor authentication is mandatory for all employee accounts.",
+            "product": "Product1"
+        },
+        {
+            "question": "What logging and monitoring capabilities are in place",
+            "answer": "We maintain comprehensive logging of all system and user activities with 12-month retention. Logs are stored in tamper-evident storage and regularly analyzed using SIEM tools. Real-time alerts are configured for suspicious activities, with 24/7 SOC monitoring. Customers can access their own audit logs through our API.",
+            "product": "Product2"
+        },
+        {
+            "question": "Describe your third-party dependency management process",
+            "answer": "All third-party dependencies undergo security review before approval. Dependencies are automatically scanned for vulnerabilities daily using multiple tools. We maintain an up-to-date inventory of all dependencies and their security status. Critical updates are fast-tracked through our patch management process.",
+            "product": "Product1"
+        },
+        {
+            "question": "What controls are in place to prevent data exfiltration",
+            "answer": "We employ DLP solutions to monitor and prevent unauthorized data transfers. All outbound traffic is inspected and logged. USB storage is disabled by default, and cloud storage access is controlled through approved corporate solutions only. Regular DLP audits are conducted to ensure effectiveness.",
+            "product": "Product2"
+        },
+        {
+            "question": "Describe your secure software development lifecycle",
+            "answer": "Our SDLC incorporates security at every stage, including threat modeling during design, automated security testing in CI/CD, and manual code reviews. All developers receive annual security training. We use automated tools for static and dynamic analysis, with security gates preventing deployment of vulnerable code.",
+            "product": "Product1"
+        }
+    ]
+}

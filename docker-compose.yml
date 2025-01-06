@@ -1,0 +1,49 @@
+services:
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    env_file:
+      - .env
+
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+      - ${QA_DIRECTORY_PATH}:/app/data/questions_and_answers
+      - qdrant_storage:/app/data/storage/qdrant
+    working_dir: /app
+    depends_on:
+      - qdrant
+
+  frontend:
+    build: 
+      context: ./app/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app/frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    env_file:
+      - .env
+    depends_on:
+      - backend
+
+volumes:
+  qdrant_storage:
+    name: qdrant_storage
