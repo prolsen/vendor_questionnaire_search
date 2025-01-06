@@ -152,6 +152,7 @@ You can also have more json fields that will be added as metadata.
         },
     ]
 }
+```
 
 2. Place JSON files in the `./app/data/questions_and_answers` directory. I have fake samples in there for you.
 
